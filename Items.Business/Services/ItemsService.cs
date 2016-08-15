@@ -30,19 +30,21 @@ namespace Items.Business.Services
 
 
         // Mock database with some sample data
+
         private static readonly List<Item> mockDatabase = new List<Item>
         {
-            new Item{Id = GetIndex(),    Place = "Melbourne",           Userid = "2",},
-            new Item{Id = GetIndex(),    Place = "Melbourne",          Userid = "3",},
-            new Item{Id = GetIndex(),    Place = "Melbourne",            Userid = "5",},
-            new Item{Id = GetIndex(),    Place = "Sydney",           Userid = "5",},
-            new Item{Id = GetIndex(),    Place = "Sydney",     Userid = "3",},
-            new Item{Id = GetIndex(),    Place = "Melbourne",        Userid = "3",},
-            new Item{Id = GetIndex(),    Place = "Melbourne",         Userid = "2",},
+            new Item{Id = GetIndex(),    Place = "Melbourne",           UserName = "Rabia",},
+            new Item{Id = GetIndex(),    Place = "Melbourne",          UserName = "Joshua",},
+            new Item{Id = GetIndex(),    Place = "Melbourne",            UserName = "James",},
+            new Item{Id = GetIndex(),    Place = "Sydney",           UserName = "Whity",},
+            new Item{Id = GetIndex(),    Place = "Sydney",     UserName = "Pon",},
+            new Item{Id = GetIndex(),    Place = "Melbourne",        UserName = "Nisha",},
+            new Item{Id = GetIndex(),    Place = "Melbourne",         UserName = "Sam",},
         };
 
         public Item Add(Item item)
         {
+
             mockDatabase.Add(item);
             item.Id = GetIndex();
             return item;
@@ -55,7 +57,7 @@ namespace Items.Business.Services
 
         public Item Get(string name)
         {
-            return mockDatabase.SingleOrDefault(item => item.Place == name);
+            return mockDatabase.SingleOrDefault(item => item.UserName == name);
         }
 
         public IEnumerable<Item> GetAll()
@@ -75,7 +77,10 @@ namespace Items.Business.Services
 
             serverItem.Place = updatedItem.Place;
             serverItem.DateOfTravel = updatedItem.DateOfTravel;
-            serverItem.Userid = updatedItem.Userid;
+            serverItem.UserName = updatedItem.UserName;
+            serverItem.FlightCost = updatedItem.FlightCost;
+            serverItem.FlightName = updatedItem.FlightName;
+            serverItem.Website = updatedItem.Website;
 
             return true;
         }
@@ -103,7 +108,7 @@ namespace Items.Business.Services
 
         public bool Any(string name)
         {
-            return mockDatabase.Any(item => item.Place == name);
+            return mockDatabase.Any(item => item.UserName == name);
         }
 
         public void Dispose()

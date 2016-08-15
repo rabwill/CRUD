@@ -7,7 +7,7 @@ namespace Items.Business.DAL.Entities
     public class Item
     {
         #region id
-  
+
         [Key]
         public int Id { get; set; }
 
@@ -17,13 +17,12 @@ namespace Items.Business.DAL.Entities
 
         [MaxLength(200)]
         [Index(IsUnique = true)]
-        public string Place { get; set; }
+        public string UserName { get; set; }
 
         #endregion
+        #region Place
 
-        #region userird
-
-        public string Userid { get; set; }
+        public string Place { get; set; }
 
         #endregion
         #region date of travel
@@ -31,11 +30,27 @@ namespace Items.Business.DAL.Entities
         public string DateOfTravel { get; set; }
 
         #endregion
+        #region FlightName
 
-      //  #region migratingto
+        public string FlightName { get; set; }
+        #endregion
+        #region FlightCost
 
-     //  public virtual City MigratingTo { get; set; }
+        public string FlightCost { get; set; }
 
-    //    #endregion
+        #endregion
+        #region Website
+
+        public string Website { get; set; }
+
+
+
+        #endregion
+
+        //  #region migratingto
+
+        //  public virtual City MigratingTo { get; set; }
+
+        //    #endregion
     }
 }

@@ -4,11 +4,10 @@
         <a ui-sref="items">
             Demo
         </a>
-        <small>           
+        <small>
             Travel Details- Count- ({{itemsCtrl.gridController.allItems.length}})
         </small>
     </h1>
-
     <div crud-grid
          column-button-click='itemsCtrl.gridOnButtonClick'
          initialized='itemsCtrl.gridOnInitialized'
@@ -27,16 +26,34 @@
             "required"      :"true"
          },
          {
-            "binding"       :"userid",
+            "binding"       :"username",
             "header"        :"User",
             "type"          :"text",
             "required"      :"true"
          },
           {
-            "binding"       :"DateOfTravel",
+            "binding"       :"dateoftravel",
             "header"        :"Date Of Travel",
             "type"          :"date",
-            "required"      :"true"
+            "required"      :"false"
+         },
+          {
+            "binding"       :"FlightName",
+            "header"        :"Flight Name",
+            "type"          :"text",
+            "required"      :"false"
+         },
+          {
+            "binding"       :"FlightCost",
+            "header"        :"Flight Cost",
+            "type"          :"text",
+            "required"      :"false"
+         },
+          {
+            "binding"       :"Website",
+            "header"        :"Website",
+            "type"          :"text",
+            "required"      :"false"
          },
          {
              "type"         :"button",

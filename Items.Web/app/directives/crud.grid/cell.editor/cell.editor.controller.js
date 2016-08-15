@@ -17,7 +17,7 @@ function cellEditorController($scope) {
     self.openDatePicker = _openDatePicker;
     
     self.fireKeyUpEvent = _fireKeyUpEvent;
-    $scope.CityList = [{ cityid: 'Melbourne', citydesc: 'Melbourne' }, { cityid: 'Sydney', citydesc: 'Sydney' }];
+    //$scope.CityList = [{ cityid: 'Melbourne', citydesc: 'Melbourne' }, { cityid: 'Sydney', citydesc: 'Sydney' }];
 
     
 
