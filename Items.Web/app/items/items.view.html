@@ -1,0 +1,55 @@
+﻿<div>
+    <h1>
+        <i class="btn glyphicon glyphicon-folder-open disabled" style="vertical-align: middle"></i>
+        <a ui-sref="items">
+            Demo
+        </a>
+        <small>           
+            Travel Details- Count- ({{itemsCtrl.gridController.allItems.length}})
+        </small>
+    </h1>
+
+    <div crud-grid
+         column-button-click='itemsCtrl.gridOnButtonClick'
+         initialized='itemsCtrl.gridOnInitialized'
+         server-url='{{itemsCtrl.serverUrl}}'
+         columns-definition='[
+         {
+            "binding"       :"id",
+            "type"          :"text",
+            "required"      :"true",
+            "hidden"        :"true"
+         },
+         {
+            "binding"       :"place",
+            "header"        :"Place",
+            "type"          :"selectCity",
+            "required"      :"true"
+         },
+         {
+            "binding"       :"userid",
+            "header"        :"User",
+            "type"          :"text",
+            "required"      :"true"
+         },
+          {
+            "binding"       :"DateOfTravel",
+            "header"        :"Date Of Travel",
+            "type"          :"date",
+            "required"      :"true"
+         },
+         {
+             "type"         :"button",
+             "icon"         :"btn glyphicon glyphicon-plus",
+             "buttonid"     :"plus",
+             "class"        :"column-width-auto"
+         },
+         {
+             "type"         :"button",
+             "icon"         :"btn glyphicon glyphicon-minus",
+             "buttonid"     :"minus",
+             "class"        :"column-width-auto"
+         }
+         ]'>
+    </div>
+</div>

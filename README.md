@@ -1,0 +1,2 @@
+A grid with create, read, update and delete inline functionality using AngularJS and WebAPI.
+The datasource of the grid is the URL of a WebAPI to access the items to display.need to change to DB from EF.
