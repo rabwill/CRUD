@@ -33,13 +33,13 @@ namespace Items.Business.Services
 
         private static readonly List<Item> mockDatabase = new List<Item>
         {
-            new Item{Id = GetIndex(),Place = "Melbourne",UserName = "Rabia",DateOfTravel="",FlightCost="",FlightName="",Website=""},
-            new Item{Id = GetIndex(),Place = "Melbourne",UserName = "Joshua",DateOfTravel="",FlightCost="",FlightName="",Website=""},
-            new Item{Id = GetIndex(),Place = "Melbourne",UserName = "James",DateOfTravel="",FlightCost="",FlightName="",Website=""},
-            new Item{Id = GetIndex(),Place = "Sydney",UserName = "Whity",DateOfTravel="",FlightCost="",FlightName="",Website=""},
-            new Item{Id = GetIndex(),Place = "Sydney",UserName = "Pon",DateOfTravel="",FlightCost="",FlightName="",Website=""},
-            new Item{Id = GetIndex(),Place = "Melbourne",UserName = "Nisha",DateOfTravel="",FlightCost="",FlightName="",Website=""},
-            new Item{Id = GetIndex(),Place = "Melbourne",UserName = "Sam",DateOfTravel="",FlightCost="",FlightName="",Website=""},
+            new Item{Id = GetIndex(),Place = "Melbourne",Username = "Rabia",DateOfTravel="",FlightCost="",FlightName="",Website=""},
+            new Item{Id = GetIndex(),Place = "Melbourne",Username = "Joshua",DateOfTravel="",FlightCost="",FlightName="",Website=""},
+            new Item{Id = GetIndex(),Place = "Melbourne",Username = "James",DateOfTravel="",FlightCost="",FlightName="",Website=""},
+            new Item{Id = GetIndex(),Place = "Sydney",Username = "Whity",DateOfTravel="",FlightCost="",FlightName="",Website=""},
+            new Item{Id = GetIndex(),Place = "Sydney",Username = "Pon",DateOfTravel="",FlightCost="",FlightName="",Website=""},
+            new Item{Id = GetIndex(),Place = "Melbourne",Username = "Nisha",DateOfTravel="",FlightCost="",FlightName="",Website=""},
+            new Item{Id = GetIndex(), Place = "Melbourne",Username = "Sam",DateOfTravel="",FlightCost="",FlightName="",Website=""},
         };
 
         public Item Add(Item item)
@@ -57,7 +57,7 @@ namespace Items.Business.Services
 
         public Item Get(string name)
         {
-            return mockDatabase.SingleOrDefault(item => item.UserName == name);
+            return mockDatabase.SingleOrDefault(item => item.Username == name);
         }
 
         public IEnumerable<Item> GetAll()
@@ -77,7 +77,7 @@ namespace Items.Business.Services
 
             serverItem.Place = updatedItem.Place;
             serverItem.DateOfTravel = updatedItem.DateOfTravel;
-            serverItem.UserName = updatedItem.UserName;
+            serverItem.Username = updatedItem.Username;
             serverItem.FlightCost = updatedItem.FlightCost;
             serverItem.FlightName = updatedItem.FlightName;
             serverItem.Website = updatedItem.Website;
@@ -108,7 +108,7 @@ namespace Items.Business.Services
 
         public bool Any(string name)
         {
-            return mockDatabase.Any(item => item.UserName == name);
+            return mockDatabase.Any(item => item.Username == name);
         }
 
         public void Dispose()
