@@ -96,7 +96,7 @@
                             <!-- Text -->
                             <span ng-switch-default>{{knownItem[column.binding]}}</span>
                             <!-- Date -->
-                            <span ng-switch-when="date">{{knownItem[column.binding]| date:'fullDate'}}</span>
+                            <span ng-switch-when="date">{{knownItem[column.binding]| date:'dd/MM/yyyy'}}</span>
                             <!-- Button -->
                             <span ng-switch-when="button">
                                 <div class="btn-group ">

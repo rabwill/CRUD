@@ -153,7 +153,8 @@ function crudgridController($scope, $element, $attrs, ajaxServiceFactory, notifi
                 // success response
                 function (createdItem) {
                     // Add at the first position
-                    self.allItems.unshift(createdItem);
+                     self.allItems.unshift(createdItem);
+                   
                     self.addMode = false;
 
                     _requestSuccess(createdItem);

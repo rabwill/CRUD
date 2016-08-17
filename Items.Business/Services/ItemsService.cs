@@ -33,13 +33,13 @@ namespace Items.Business.Services
 
         private static readonly List<Item> mockDatabase = new List<Item>
         {
-            new Item{Id = GetIndex(),    Place = "Melbourne",           UserName = "Rabia",},
-            new Item{Id = GetIndex(),    Place = "Melbourne",          UserName = "Joshua",},
-            new Item{Id = GetIndex(),    Place = "Melbourne",            UserName = "James",},
-            new Item{Id = GetIndex(),    Place = "Sydney",           UserName = "Whity",},
-            new Item{Id = GetIndex(),    Place = "Sydney",     UserName = "Pon",},
-            new Item{Id = GetIndex(),    Place = "Melbourne",        UserName = "Nisha",},
-            new Item{Id = GetIndex(),    Place = "Melbourne",         UserName = "Sam",},
+            new Item{Id = GetIndex(),Place = "Melbourne",UserName = "Rabia",DateOfTravel="",FlightCost="",FlightName="",Website=""},
+            new Item{Id = GetIndex(),Place = "Melbourne",UserName = "Joshua",DateOfTravel="",FlightCost="",FlightName="",Website=""},
+            new Item{Id = GetIndex(),Place = "Melbourne",UserName = "James",DateOfTravel="",FlightCost="",FlightName="",Website=""},
+            new Item{Id = GetIndex(),Place = "Sydney",UserName = "Whity",DateOfTravel="",FlightCost="",FlightName="",Website=""},
+            new Item{Id = GetIndex(),Place = "Sydney",UserName = "Pon",DateOfTravel="",FlightCost="",FlightName="",Website=""},
+            new Item{Id = GetIndex(),Place = "Melbourne",UserName = "Nisha",DateOfTravel="",FlightCost="",FlightName="",Website=""},
+            new Item{Id = GetIndex(),Place = "Melbourne",UserName = "Sam",DateOfTravel="",FlightCost="",FlightName="",Website=""},
         };
 
         public Item Add(Item item)

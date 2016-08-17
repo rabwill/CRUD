@@ -9,18 +9,22 @@ namespace Items.Web.ViewModels
     {
         [DataMember]
         public int Id { get; set; }
+
         [DataMember]
         public string Place { get; set; }
 
         [DataMember]
         public string Username { get; set; }
+
         [DataMember]
         public string DateOfTravel { get; set; }
 
         [DataMember]
         public string FlightName { get; set; }
+
         [DataMember]
         public string FlightCost { get; set; }
+
         [DataMember]
         public string Website { get; set; }
 
